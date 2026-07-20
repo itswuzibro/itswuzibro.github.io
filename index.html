@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prénom Nom | Développeur</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+header h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+header h2{
+font-weight:300;
+color:#38bdf8;
+margin-bottom:25px;
+}
+
+header p{
+max-width:700px;
+opacity:.8;
+}
+
+.buttons{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#38bdf8;
+color:black;
+}
+
+.secondary{
+border:2px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:90px 10%;
+}
+
+h3{
+font-size:2.5rem;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-8px);
+background:#334155;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+}
+
+.project h4{
+margin-bottom:10px;
+}
+
+.project a{
+display:inline-block;
+margin-top:20px;
+color:#38bdf8;
+text-decoration:none;
+}
+
+.cv{
+text-align:center;
+}
+
+.cv a{
+display:inline-block;
+margin-top:30px;
+padding:18px 35px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#020617;
+margin-top:80px;
+}
+
+.socials{
+margin-top:20px;
+}
+
+.socials a{
+margin:10px;
+color:#38bdf8;
+text-decoration:none;
+}
+
+@media(max-width:700px){
+
+header h1{
+font-size:2.8rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Prénom Nom</h1>
+
+<h2>Développeur Informatique</h2>
+
+<p>
+
+Passionné par le développement logiciel, l'administration système, le cloud et les nouvelles technologies.
+Je recherche des opportunités en développement, DevOps ou cybersécurité.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#competences">Mes compétences</a>
+
+<a class="btn secondary" href="CV.pdf" target="_blank">Télécharger mon CV</a>
+
+</div>
+
+</header>
+
+<section id="competences">
+
+<h3>Compétences</h3>
+
+<div class="skills">
+
+<div class="skill">
+<h4>Développement Web</h4>
+<p>HTML • CSS • JavaScript • React • Node.js</p>
+</div>
+
+<div class="skill">
+<h4>Programmation</h4>
+<p>Python • Java • C • C++ • C#</p>
+</div>
+
+<div class="skill">
+<h4>Bases de données</h4>
+<p>MySQL • PostgreSQL • MongoDB</p>
+</div>
+
+<div class="skill">
+<h4>DevOps</h4>
+<p>Docker • Git • GitHub • Linux</p>
+</div>
+
+<div class="skill">
+<h4>Cloud</h4>
+<p>AWS • Azure • GCP</p>
+</div>
+
+<div class="skill">
+<h4>Cybersécurité</h4>
+<p>Réseaux • Pentest • Sécurité Web</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h3>Projets</h3>
+
+<div class="projects">
+
+<div class="project">
+
+<h4>Projet 1</h4>
+
+<p>Description rapide du projet.</p>
+
+<a href="#">Voir sur GitHub →</a>
+
+</div>
+
+<div class="project">
+
+<h4>Projet 2</h4>
+
+<p>Description rapide du projet.</p>
+
+<a href="#">Voir sur GitHub →</a>
+
+</div>
+
+<div class="project">
+
+<h4>Projet 3</h4>
+
+<p>Description rapide du projet.</p>
+
+<a href="#">Voir sur GitHub →</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cv">
+
+<h3>Mon CV</h3>
+
+<p>
+
+Vous pouvez consulter ou télécharger mon CV au format PDF.
+
+</p>
+
+<a href="CV.pdf" target="_blank">
+📄 Consulter mon CV
+</a>
+
+</section>
+
+<footer>
+
+<h3>Me contacter</h3>
+
+<p>prenom.nom@email.com</p>
+
+<div class="socials">
+
+<a href="https://github.com/tonpseudo">GitHub</a>
+
+<a href="https://linkedin.com/in/tonprofil">LinkedIn</a>
+
+<a href="mailto:prenom.nom@email.com">Email</a>
+
+</div>
+
+<p style="margin-top:30px;">
+© 2026 - Prénom Nom
+</p>
+
+</footer>
+
+</body>
+</html>
