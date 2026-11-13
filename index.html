@@ -1,145 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet">
-	
-	<title>Jean-Loup De Saint | Développeur</title>
-	
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<title>Jean-Loup De Saint | Portfolio</title>
 </head>
 
 <body>
-	<header>
-	
-		<h1>Jean-Loup De Saint</h1>
-		
-		<h2>Développeur Logiciel Junior</h2>
-		
-		<p>
-			Développeur logiciel en fin de cursus formé à l’école 42, je recherche un stage de fin d’études pour valider mon bac+3.
-			Spécialisé en programmation système, algorithmique et conception d’applications. Expérience sur des projets complexes impliquant développement full-stack, programmation concurrente, moteurs graphiques et systèmes Unix/Linux, habitué au travail collaboratif, aux revues de code et à la résolution de problèmes techniques exigeants.
+
+<!-- -------------------- HEADER --------------------- -->
+<header class="top-header">
+	<a href="index.html" class="logo"> Jean-Loup De Saint </a>
+
+	<!-- NAV BAR -->
+	<div class="nav-links">
+		<a href="index.html">Accueil</a>
+		<a href="code.html">Programmation</a>
+		<a href="3d.html">Jeux Vidéos & Création 3D</a>
+	</div>
+
+	<!-- HEADER CONTACT-->
+	<div class="header-contact">
+		<h3> Contact:</h3>
+		<a href="mailto:jl.desaint@hotmail.fr"> jl.desaint@hotmail.fr </a>
+		<a href="https://github.com/itswuzibro" target="_blank"> GitHub </a>
+		<a href="https://www.linkedin.com/in/jldes" target="_blank"> LinkedIn </a>
+	</div>
+</header>
+
+<!-- -------------------- MAIN --------------------- -->
+<main class="home-container">
+
+	<!-- PARTIE GAUCHE : PRESENTATION -->
+	<section class="presentation">
+		<h1>Développeur Logiciel & Développeur Unreal Engine</h1>
+		<p class="description">
+				Développeur logiciel en fin de cursus à l'école 42,
+				je recherche un stage de fin d'études pour valider
+				mon bac+3.
+
+				Spécialisé en programmation système, algorithmique
+				et conception d'applications, j'ai travaillé sur
+				différents projets techniques impliquant développement
+				logiciel, programmation concurrente, moteurs
+				graphiques et systèmes Unix/Linux.
+
+				Curieux et polyvalent, je m'intéresse également
+				à la création 3D et au développement d'univers
+				interactifs.
 		</p>
-		
-		<div class="buttons">
-			<a class="btn primary" href="#competences">Mes compétences</a>
-			<a class="btn secondary" href="CV.pdf" target="_blank">Télécharger mon CV</a>
-		</div>
-	</header>
 
-<section id="competences">
-
-	<h3>Compétences</h3>
 
 		<div class="skills">
+			<h2>COMPÉTENCES</h2>
 
-			<div class="skill">
-				<h4>Développement Web</h4>
-				<p>HTML • CSS • JavaScript</p>
+			<div class="skill-group">
+				<span>Programmation</span>
+				<p>C - C++ (de 98 à 11) - HTML & CSS - JavaScript</p>
 			</div>
 
-			<div class="skill">
-				<h4>Programmation</h4>
-				<p>C • C++ • JavaScript</p>
+			<div class="skill-group">
+				<span>Développement jeux vidéo & création 3D</span>
+				<p>Unreal Engine 4 & 5 (Animations/Gameplay/Level Design/VFX) - Blender (Modeling) - Substance Painter (Texturing) - Gaia (Terrain) - Tree it (Végétation) - Ableton Live (SFX/Musique) - Gimp (Manipulation d'images)</p>
 			</div>
 
-			<div class="skill">
-				<h4>Bases de données</h4>
-				<p>MySQL</p>
+			<div class="skill-group">
+				<span>Systèmes</span>
+				<p>Environnent Linux - Docker - Git - GCC & Makefile - AVR GCC</p>
 			</div>
 
-			<div class="skill">
-				<h4>DevOps</h4>
-				<p>Docker • Git • GitHub • Linux</p>
+			<div class="skill-group">
+				<span>Électronique embarquée</span>
+				<p>AVR/ATmega328P - GPIO - UART - I2C - SPI - Timers - Interruptions - Capteur AHT20</p>
 			</div>
 
-			<div class="skill">
-				<h4>Cybersécurité</h4>
-				<p>Réseaux • Pentest • Sécurité Web</p>
-			</div>
+		
+		</div>
+	</section>
 
+<!-- ------------------------------------- SEPARATION PARTIE GAUCHE & DROITE ------------------------------------------------ -->
+
+
+	<!-- PARTIE DROITE : NAVIGATION -->
+	<section class="navigation">
+		<div class="navigation-intro">
+			<h2>Explorer mon univers</h2>
+			<p> Découvrez mes projets, mes compétences et mon parcours. </p>
 		</div>
 
-</section>
+		<div class="nav-buttons">
+			<!-- PAGE CONCERNANT LES PROJETS 42 -->
+			<a href="code.html" class="nav-card">
+				<span class="puce"> >> </span>
+				<div>
+					<h3>Programmation</h3>
+					<p> Projets techniques réalisés à 42 Paris </p>
+				</div>
+				<span class="arrow">↗</span>
+			</a>
 
-	<section>
+			<!-- PAGE SUR PRJETS PERSOS UE & 3D -->
+			<a href="3d.html" class="nav-card">
+				<span class="puce"> >> </span>
+				<div>
+					<h3>Développement Jeux Vidéo & Création 3D</h3>
+					<p>Unreal Engine - Blender - Substance Painter - Gaia - Tree it - Gimp - Ableton Live</p>
+				</div>
+				<span class="arrow">↗</span>
+			</a>
 
-	<h3>Projets</h3>
+			<!-- CONSULTATION DU CV -->
+			<a href="Creative - Level Design.pdf" target="_blank" class="nav-card">
+				<span class="puce"> >> </span>
+				<div>
+					<h3>Consulter mon CV</h3>
+					<p>Visualiser mon parcours professionnel</p>
+				</div>
+				<span class="arrow">↗</span>
+			</a>
 
-	<div class="projects">
+			<!-- TELECHARGEMENT DU CV -->
+			<a href="Creative - Level Design.pdf" download class="nav-card">
+				<span class="puce"> >> </span>
+				<div>
+					<h3>Télécharger mon CV</h3>
+					<p>(Version PDF)</p>
+				</div>
+				<span class="arrow">↓</span>
+			</a>
 
-	<div class="project">
+		</div>
+	</section>
+</main>
 
-	<h4>Projet 1</h4>
 
-	<p>Description rapide du projet.</p>
-
-	<a href="#">Voir sur GitHub →</a>
-
+<!-- ----------------- FOOTER --------------------- -->
+<footer class="code-footer">
+	<div class="footer-contact">
+		<h3>Me contacter via les liens suivants:</h3>
 	</div>
 
-	<div class="project">
-
-	<h4>Projet 2</h4>
-
-	<p>Description rapide du projet.</p>
-
-	<a href="#">Voir sur GitHub →</a>
-
+	<div class="socials">
+		<a href="mailto:jl.desaint@hotmail.fr"> jl.desaint@hotmail.fr </a>
+		<a href="https://github.com/itswuzibro" target="_blank"> GitHub </a>
+		<a href="https://www.linkedin.com/in/jldes" target="_blank"> LinkedIn </a>
 	</div>
-
-	<div class="project">
-
-	<h4>Projet 3</h4>
-
-	<p>Description rapide du projet.</p>
-
-	<a href="#">Voir sur GitHub →</a>
-
-	</div>
-
-	</div>
-
-</section>
-
-<section class="cv">
-
-<h3>Mon CV</h3>
-
-<p>
-
-Vous pouvez consulter ou télécharger mon CV au format PDF.
-
-</p>
-
-<a href="CV.pdf" target="_blank">
-📄 Consulter mon CV
-</a>
-
-</section>
-
-<footer>
-
-<h3>Me contacter</h3>
-
-<p>myjobadress@protonmail.com</p>
-
-<div class="socials">
-
-<a href="https://github.com/itswuzibro">GitHub</a>
-
-<a href="https://www.linkedin.com/in/jldes">LinkedIn</a>
-
-<a href="mailto:myjobadress@protonmail.com">Email</a>
-
-</div>
-
-<p style="margin-top:30px;">
-	© 2026 - Jean-Loup De Saint
-</p>
-
+	<p class="copyright"> © 2026 - Jean-Loup De Saint </p>
 </footer>
+
 
 </body>
 </html>

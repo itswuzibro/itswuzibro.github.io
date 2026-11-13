@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/code.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<title>Développement</title>
+</head>
+
+<body>
+
+
+
+<!-- -------------------- HEADER --------------------- -->
+<header class="top-header">
+	<a href="index.html" class="logo"> Jean-Loup De Saint </a>
+
+	<!-- NAV BAR -->
+	<div class="nav-links">
+		<a href="index.html">Accueil</a>
+		<a href="code.html">Programmation</a>
+		<a href="3d.html">Jeux Vidéos & Création 3D</a>
+	</div>
+
+	<!-- HEADER CONTACT-->
+	<div class="header-contact">
+    <h3> Contact:</h3>
+		<a href="mailto:jl.desaint@hotmail.fr"> jl.desaint@hotmail.fr </a>
+		<a href="https://github.com/itswuzibro" target="_blank"> GitHub </a>
+		<a href="https://www.linkedin.com/in/jldes" target="_blank"> LinkedIn </a>
+	</div>
+</header>
+
+
+
+
+<!-- -------------------- MAIN --------------------- -->
+<main class="code-container">
+	<div class="code-intro">
+		<h1>Unreal Engine & Création 3D</h1>
+	</div>
+	<p>Un aperçu de ce que je fais en indépendant avec Unreal Blender et Substance Painter</p>
+
+	
+	<div class="projects-grid">
+
+		<!-- ----------------- PROJET 1 OLD HOUSE ----------------------- -->
+		<article class="code-project">
+			<video class="project-media" controls preload="metadata" poster="imgs/OldHouse_poster.png">
+				<source src="vids/TheOldHouse_demo.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la lecture vidéo.
+			</video>
+
+				<div class="project-content">
+					<div class="project-heading">
+						<h2>The Old House</h2>
+						<span class="project-tech">Unreal Engine - Blender - Substance Painter</span>
+					</div>
+
+					<p>WIP d'un escape game horrifique.</p>
+					<p>Conception d'une maison à plusieurs étages et multiples pièces via Blender (cave, rez de chaussée et un étage), peuplée uniquement d'assets réalisés par mes soins (à l'exception des arbres via TreeIt). Utilisation de material instance enfant de material master. Utilisation de vraies photographies pour certaines textures (papier peint, etc). Logique afin de créer des pièges pour empecher le joueur de sauver sa promise détenue quelque part dans la maison.</p>
+				</div>
+		</article>
+
+		<!-- ----------------- PROJET 2 NEOLIFE ----------------------- -->
+		<article class="code-project">
+			<video class="project-media" controls preload="metadata" poster="imgs/NeoLife_poster.png">
+				<source src="vids/NeoLife_demo.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la lecture vidéo.
+			</video>
+
+			<div class="project-content">
+
+				<div class="project-heading">
+					<h2>NeoLife</h2>
+					<span class="project-tech">Unreal Engine - Blender - Substance Painter</span>
+				</div>
+
+				<p>WIP d'un jeu d'horreur en TPS basé sur Resident Evil </p>
+				<p>Majorité des assets crées via Blender, certains directement téléchargés. Réalisation de devanture de magasin avec de vraies photos, portes d'immeubles, interphones, utilisation de décals pour les tags, plaque d'égouts, création de logique pour mettre la grue en mouvement, design du level pour garder le joueur dans la direction souhaitée par le jeu.</p>
+			</div>
+		</article>
+
+		<!-- ----------------- PROJET 3 ASSET SHOWCASE --------------------- -->
+		<article class="code-project featured-project">
+
+			<div class="project-slideshow">
+				<div class="slides">
+					<img src="imgs/uzi_modeling.png" class="active">
+					<img src="imgs/uzi_texture.png">
+
+					<img src="imgs/knife_model.png">
+					<img src="imgs/knife_texture.png">
+
+					<img src="imgs/oldhouse_1.png">
+					<img src="imgs/oldhouse_2.png">
+					<img src="imgs/building_model.png">
+					<img src="imgs/TV_model.png">
+					<img src="imgs/axe_model.png">
+					<img src="imgs/boat_model.png">
+				</div>
+
+				<button class="slide-arrow prev" onclick="changeSlide(this, -1)"> &#10094; </button>
+				<button class="slide-arrow next" onclick="changeSlide(this, 1)"> &#10095; </button>
+				<div class="slide-indicators"></div>
+			</div>
+
+			<div class="project-content">
+				<div class="project-heading">
+					<h2>Little showcase</h2>
+					<span class="project-tech">Blender & Substance Painter</span>
+				</div>
+				<p>slideshow de différents assets que j'utilise dans mes projets.</p>
+			</div>
+		</article>
+
+</main>
+
+
+
+
+
+<!-- ----------------- FOOTER --------------------- -->
+<footer class="code-footer">
+	<div class="footer-contact">
+		<h3>Me contacter via les liens suivants:</h3>
+	</div>
+
+	<div class="socials">
+		<a href="mailto:jl.desaint@hotmail.fr"> jl.desaint@hotmail.fr </a>
+		<a href="https://github.com/itswuzibro" target="_blank"> GitHub </a>
+		<a href="https://www.linkedin.com/in/jldes" target="_blank"> LinkedIn </a>
+	</div>
+	<p class="copyright"> © 2026 - Jean-Loup De Saint </p>
+</footer>
+
+<script>
+function changeSlide(button, direction)
+{
+	const slideshow = button.closest(".project-slideshow");
+	const images = slideshow.querySelectorAll(".slides img");
+	const indicators = slideshow.querySelector(".slide-indicators");
+
+	let currentIndex = Array.from(images).findIndex(image => image.classList.contains("active"));
+
+	images[currentIndex].classList.remove("active");
+	indicators.children[currentIndex].classList.remove("active");
+	currentIndex = (currentIndex + direction + images.length) % images.length;
+	images[currentIndex].classList.add("active");
+	indicators.children[currentIndex].classList.add("active");
+}
+
+document.querySelectorAll(".project-slideshow").forEach(slideshow =>
+{
+	const images = slideshow.querySelectorAll(".slides img");
+	const indicators = slideshow.querySelector(".slide-indicators");
+
+    images.forEach((image, index) =>
+    {
+		const dot = document.createElement("span");
+		if (index === 0)
+			dot.classList.add("active");
+
+		indicators.appendChild(dot);
+	});
+});
+</script>
+
+
+</body>
+</html>
